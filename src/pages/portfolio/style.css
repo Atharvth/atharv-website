@@ -1,0 +1,124 @@
+:root {
+  --primary-color: #ff4500; /* Red accent color */
+  --secondary-color: #282c34;
+  --overlay-color: rgba(0, 0, 0, 0.5); /* Reduced opacity for clearer images */
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+.po_items_ho {
+  column-width: 15em;
+  column-gap: 4rem;
+}
+
+.po_item {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem auto;
+  position: relative;
+  background: var(--secondary-color);
+  padding: 6px;
+  border: 2px solid var(--primary-color);
+  transition: 0.3s ease;
+  font-size: 0;
+  min-height: 300px;
+}
+
+.po_item img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.po_item .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--overlay-color);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  color: var(--bg-color);
+}
+
+.po_item:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.po_item:hover .content {
+  opacity: 0.8; /* Adjusted for better clarity */
+}
+
+.po_item .content a {
+  background: var(--bg-color);
+  border: solid 1px var(--primary-color);
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.po_item .content a:hover {
+  text-decoration: none;
+  background: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-b-lg {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-black\/60 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.text-lg {
+  font-size: 1.125rem; /* Slightly larger size for the icons */
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-x-4 > :not(:last-child) {
+  margin-right: 1rem; /* Space between icons */
+}
