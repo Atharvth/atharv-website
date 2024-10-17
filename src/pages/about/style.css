@@ -1,64 +1,163 @@
-.sec_sp {
-    margin-bottom: calc(3rem + 5.128vw)
+/* Root Variables for Dark Theme */
+:root {
+    --bg-color: #0c0c0c;
+    --primary-color: #0d0d0d;
+    --secondary-color: #000000;
+    --text-color: #ffffff;
+    --text-color-2: #ffffff;
+    --text-color-3: rgb(245, 6, 6);
+    --overlay-color: rgba(12, 12, 12, 0.63);
+    --elite-red: rgb(245, 6, 6);
+    --box-bg-color: #1a1a1a; /* Dark grey background for boxes */
+    --box-text-color: #ffffff; /* White text for boxes */
 }
 
-.table td,
-.table th {
+/* Variables for Light Theme */
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --text-color: #000000;
+    --text-color-2: #000000;
+    --text-color-3: rgb(245, 6, 6);
+    --overlay-color: rgba(255, 255, 255, 0.7);
+    --box-bg-color: #f0f0f0; /* Light grey background for boxes */
+    --box-text-color: #000000; /* Black text for boxes */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 60px;
+    border-left: 10px solid var(--primary-color);
+    border-right: 10px solid var(--primary-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Marcellus', serif;
+}
+
+a,
+a:hover {
+    color: var(--text-color);
+}
+
+p {
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.ovhidden {
+    overflow: hidden;
+}
+
+.text_2,
+.text_2:hover {
+    color: var(--text-color-2);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.cursor__dot div {
+    z-index: 999999 !important;
+}
+
+.cursor__dot div:last-child {
+    background-color: var(--text-color-3) !important;
+}
+
+.cursor__dot div:first-child {
+    filter: invert(1);
+    background-color: var(--overlay-color) !important;
+}
+
+.color_pr {
+    color: var(--primary-color) !important;
+}
+
+.color_sec {
+    color: var(--text-color);
+}
+
+/* Styles for Skills and Languages Lists */
+.skills-list,
+.languages-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.skills-list li,
+.languages-list li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-right: 15px;
+    padding: 8px 12px;
+    background-color: var(--box-bg-color); /* Background color from variables */
+    color: var(--box-text-color); /* Text color from variables */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.skills-list li:hover,
+.languages-list li:hover {
+    background-color: var(--elite-red); /* Hover effect with red color */
+    color: #ffffff; /* Ensure text is white on hover */
+    cursor: default;
+}
+
+/* Responsive styling */
+@media (max-width: 767.98px) {
+    .skills-list,
+    .languages-list {
+        flex-direction: column;
+    }
+
+    .skills-list li,
+    .languages-list li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Additional Styles */
+.sec_sp {
+    margin-bottom: calc(3rem + 5.128vw);
 }
 
 .t_border {
     border-color: var(--text-color) !important;
 }
 
-.progress-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 15px 0 20px;
-    font-family: 'Raleway';
-}
-
-.progress {
-    height: 5px;
-    background: var(--secondary);
-    border-radius: 0;
-    box-shadow: none;
-    margin-bottom: 30px;
-    overflow: visible;
-}
-
-.progress .progress-bar {
-    position: relative;
-    background: var(--text-color);
-    animation: animate-positive 2s;
-    overflow: visible;
-    opacity: 0.9;
-}
-
-.progress .progress-value {
-    position: absolute;
-    top: -30px;
-    right: 8px;
-    font-size: 17px;
-    font-weight: bold;
-    font-style: italic;
-    color: var(--text-color);
-}
-
-@-webkit-keyframes animate-positive {
-    0% {
-        width: 0%;
-    }
-}
-
-@keyframes animate-positive {
-    0% {
-        width: 0%;
-    }
-}
-
 .section-title {
     font-size: 45px;
+    color: var(--text-color);
 }
 
 .service__title {
@@ -70,9 +169,95 @@
     padding-bottom: 4px;
 }
 
+/* Updated About Me Section Styles */
+.About-header h1.display-4 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color); /* Changed from var(--elite-red) */
+}
 
-/*! CSS Used keyframes */
+.About-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
 
+.sec_sp h3.color_sec {
+    color: var(--text-color); /* Changed from var(--elite-red) */
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--text-color); /* Changed from var(--elite-red) */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.sec_sp .mb-4 h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color); /* Changed from var(--elite-red) */
+    margin-top: 20px;
+}
+
+.sec_sp .mb-4 p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.sec_sp ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.sec_sp ul li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 8px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--elite-red);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--elite-red);
+    border-color: var(--elite-red);
+}
+
+.btn-primary:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+}
+
+/* Keyframes for Animations */
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;

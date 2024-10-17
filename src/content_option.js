@@ -1,202 +1,155 @@
-const logotext = "ELITE";
+import homepageIMG from "./assets/images/homepageIMG.jpg";
+
+
+const logotext = "ATHARV";
 
 const meta = {
-    title: "Elite Esports",
-    description: "We're The #1 Organization Within Fortnite",
+    title: "Atharv Thaker",
+    description: "Aspiring Software Engineer skilled in Python, Java, and web development.",
 };
 
 const introdata = {
-    title: "We're Elite Esports & we're the",
+    title: "Hey, I'm Atharv (a-tar-v) and I'm...",
     animated: {
-        first: "Top Fortnite Org in NA.",
-        second: "Top Esports News Outlet.",
-        third: "Top Tournament Organizer.",
+        first: "an aspiring software engineer.",
+        second: "a senior CS student.",
+        third: "a BIG sports fan!",
     },
-    description: "Connect with us & check us out.",
-    your_img_url: "https://pbs.twimg.com/media/GMhA-kTWMAE3GA8?format=jpg&name=4096x4096"
+    description: "Check out all my various endeavors:",
+    your_img_url: homepageIMG,
 };
 
-const history = {
-    title: "History",
-    aboutme: "Elite Esports was founded in 2018. Elite is best known for our Tier 1 competitive placements in esports, content and digital tournament hosting. Elite is currently the second highest ranked Fortnite team in North America. Elite is headquartered in New York, New York and has a global following.",
+const aboutme = {
+    title: "About Me",
+    description:
+        "I am a senior Computer Science student at Clark University with a minor in Business Management & Business Analytics. I gained hands-on experience as a backend engineer intern at Shell, enhancing their CI/CD pipeline and increasing unit test coverage. I'm passionate about software engineering and am seeking a full-time role to contribute to innovative projects.",
 };
 
-const ourteam = {
-    title: "Our Team",
-    aboutme: "Our management team has a diverse background in marketing, coding, social media management and tournament hosting. Feel free to contact us anytime.",
-};
-
-const ourvision = {
-    title: "Our Vision",
-    aboutme: "Our vision is guided by our core values; Innovation, Professionalism, Relevance, Integrity, and Inclusion. We will continue to grow our brand built on esports and community connectivity. Our network of social and content platforms keeps our global fanbase and our Elite community expanding and evolving.",
-};
-
-const achievements = [{
-        jobtitle: "Eomzo",
-        where: "8th Place Copenhagen Gloabl Championship",
-        date: "2023",
+const experience = [
+    {
+        jobtitle: "Backend Software Engineer Intern",
+        where: "Shell, Houston, TX",
+        date: "May 2024 – August 2024",
+        description: [
+            "Developed unit tests using pytest to increase test coverage by 46%.",
+            "Enhanced CI/CD pipeline by creating coverage-summary artifact within GitHub Actions.",
+            "Resolved critical security issues identified by Mend and tackled code smells from SonarQube scans.",
+            "Refactored legacy code for better readability and performance and updated documentation for clarity.",
+        ],
     },
     {
-        jobtitle: "Sphinx",
-        where: "FNCS Major 3 6th Place",
-        date: "2024",
+        jobtitle: "Data Structures Teaching Assistant",
+        where: "Clark University, Worcester, MA",
+        date: "August 2023 – Present",
+        description: [
+            "Graded assignments, conducted weekly office hours, and assisted on in-class assignments and lab sessions.",
+            "Taught students difficult class concepts and provided individualized homework for further aid.",
+        ],
     },
     {
-        jobtitle: "Paper",
-        where: "FNCS Major 3 8th Place",
-        date: "2024",
-    },
-    {
-        jobtitle: "Parz",
-        where: "FNCS Major 3 12th Place",
-        date: "2024",
+        jobtitle: "Social Media Digital Marketing",
+        where: "Remote Freelance",
+        date: "April 2023 – Present",
+        description: [
+            "Utilized Adobe Photoshop & Adobe Premiere Pro to produce visually engaging social media content for clients.",
+            "Provided creative ideas to clients to ensure alignment of company vision with growth of social media.",
+            "Worked with a variety of clients remotely as an integral part of social media management success.",
+        ],
     },
 ];
 
-const demographic = [{
-        name: "North America",
-        value: 50,
+const projects = [
+    {
+        name: "Game Design VR Project",
+        date: "August 2021 – December 2021",
+        description: [
+            "Led a 5-member team in developing a VR game using Unity and C#.",
+            "Organized weekly meetings to ensure deadlines were met.",
+            "Overcame technical challenges through communication and collective problem-solving.",
+        ],
     },
     {
-        name: "South America",
-        value: 50,
-    },
-    {
-        name: "Europe",
-        value: 50,
-    },
-    {
-        name: "Asia",
-        value: 50,
-    },
-    {
-        name: "Africa",
-        value: 50,
+        name: "Connecting Alumni & Students Web Team Project",
+        date: "January 2023 – Present",
+        description: [
+            "Developing a website to connect students with alumni for mock interviews and resume help.",
+            "Used Django, Python, HTML, CSS, Jira, and Figma to complete the project.",
+        ],
     },
 ];
 
-const services = [{
-        title: "Tournaments",
-        description: "We have experince running Smash & Fortnite tournaments.",
-    },
+const education = [
     {
-        title: "Esports Marketing",
-        description: "We can provide your company with esports marketing on all our socials and our players socials.",
-    },
-    {
-        title: "YouTube & TikTok Sponsorships",
-        description: "We can provide advertisements within our long form content & short form content.",
+        degree: "Bachelor of Arts in Computer Science",
+        institution: "Clark University, Worcester, MA",
+        date: "Expected May 2025",
+        details: [
+            "Minor in Business Management & Business Analytics",
+            "GPA: 3.47/4.00",
+        ],
     },
 ];
 
-const dataportfolio = [{
-        img: "https://pbs.twimg.com/media/GTCJUHbWUAAmiph?format=jpg&name=medium",
-        name: "Eomzo",
-        title: "Competitive Fortnite Player",
-        x: "https://x.com/Eomzo1",
-        other_link: "https://www.twitch.tv/eomzo",
-    },
-    {
-        img: "https://pbs.twimg.com/media/GR6PKB2a8AAdWiE?format=jpg&name=4096x4096",
-        name: "Paper",
-        title: "Competitive Fortnite Player",
-        x: "https://x.com/fnpaper",
-        other_link: "https://www.twitch.tv/fnpaper"
-    },
-    {
-        img: "https://pbs.twimg.com/media/GR6PKB2a8AAdWiE?format=jpg&name=4096x4096",
-        name: "Paper",
-        title: "Competitive Fortnite Player",
-        x: "https://x.com/fnpaper",
-        other_link: "https://www.twitch.tv/fnpaper"
-    },
-    {
-        img: "https://pbs.twimg.com/media/GR6PKB2a8AAdWiE?format=jpg&name=4096x4096",
-        name: "Paper",
-        title: "Competitive Fortnite Player",
-        x: "https://x.com/fnpaper",
-        other_link: "https://www.twitch.tv/fnpaper"
-    },
-    // {
-    //     img: "https://picsum.photos/400/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/600/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/300/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/700/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-
-    // {
-    //     img: "https://picsum.photos/400/600/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/300/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/550/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/700/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
+const skills = [
+    "Python",
+    "Java",
+    "JavaScript",
+    "HTML/CSS",
+    "C#",
+    "CI/CD",
+    "MATLAB",
+    "Web Development",
+    "Adobe Photoshop",
+    "Figma",
 ];
+
+const languages = ["English", "Gujarati", "Hindi"];
+
+
+const dataportfolio = [
+    {
+      img: homepageIMG,
+      name: "Game Design VR Project",
+      description:
+        "Led a 5-member team in developing a VR game using Unity and C#.",
+      link: null, // Link was lost
+    },
+    {
+      img: homepageIMG,
+      name: "Connecting Alumni & Students Web Team Project",
+      description:
+        "Developed a website to connect students with alumni using Django and Python.",
+      link: "https://github.com/Levrk/Clark-Alumni-Website",
+    },
+    // Add more projects as needed
+  ];
 
 const contactConfig = {
-    YOUR_EMAIL: "info@eliteesports.gg",
-    YOUR_PHONE_NUMBER: "(555)123-4567",
-    description: "Give us an email or contact us, and let's get to work...",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_EMAIL: "atharvth@gmail.com",
+    YOUR_PHONE_NUMBER: "860-861-8168",
+    description:
+        "Feel free to reach out to me via email or phone. Let's connect!",
+    // Create an EmailJS.com account
+    // Check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
+    YOUR_SERVICE_ID: "your_service_id",
+    YOUR_TEMPLATE_ID: "your_template_id",
+    YOUR_USER_ID: "your_user_id",
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-    earthlink: "https://eliteesports.gg/earthlink/",
+    github: "https://github.com/your-github-username", // Replace with your GitHub profile
+    linkedin: "https://linkedin.com/in/your-linkedin-username", // Replace with your LinkedIn profile
 };
+
 export {
     meta,
-    history,
-    ourteam,
-    ourvision,
+    aboutme,
     dataportfolio,
-    achievements,
-    demographic,
-    services,
+    experience,
+    projects,
+    education,
+    skills,
+    languages,
     introdata,
     contactConfig,
     socialprofils,

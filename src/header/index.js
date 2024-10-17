@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import eliteLogo from "../assets/images/eliteLogo.svg"; // Import the SVG logo
+import eliteLogo from "../assets/images/myLogo.png"; // Import the SVG logo
 import { socialprofils } from "../content_option";
 
 const Headermain = () => {
@@ -35,26 +35,10 @@ const Headermain = () => {
                 <Link to="/" className="nav_link">Home</Link>
               </li>
               <li className="nav_item">
-                <Link to="/portfolio" className="nav_link">Roster</Link>
+                <Link to="/portfolio" className="nav_link">Portfolio</Link>
               </li>
               <li className="nav_item">
-                <Link to="/about" className="nav_link">Company</Link>
-              </li>
-              <li className="nav_item">
-                <Link to="/contact" className="nav_link">Contact</Link>
-              </li>
-              <li className="nav_item dropdown">
-                <span onClick={handleDropdownToggle} className="nav_link">News</span>
-                {isDropdownActive && (
-                  <ul className="dropdown_menu">
-                    <li>
-                      <Link onClick={handleDropdownClose} to="/news/dummy1" className="nav_link">Dummy News 1</Link>
-                    </li>
-                    <li>
-                      <Link onClick={handleDropdownClose} to="/news/dummy2" className="nav_link">Dummy News 2</Link>
-                    </li>
-                  </ul>
-                )}
+                <Link to="/about" className="nav_link">Experience</Link>
               </li>
             </ul>
           </nav>
